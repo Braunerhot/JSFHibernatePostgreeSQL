@@ -4,10 +4,10 @@
 	
 	<persistence-unit name="sistema_clientes">
 		<provider>org.hibernate.ejb.HibernatePersistence</provider>
-		<class>br.com.entidades.Pessoa</class>
-		<class>br.com.entidades.Produto</class>
-		<class>br.com.entidades.Fornecedor</class>
-		<class>br.com.entidades.Vendedor</class>
+		<class>br.com.sistema.entidades.Pessoa</class>
+		<class>br.com.sistema.entidades.Produto</class>
+		<class>br.com.sistema.entidades.Fornecedor</class>
+		<class>br.com.sistema.entidades.Vendedor</class>
 		<!-- nome do BD anterior (meuprimeiroprojetojsf) -->
 		<properties> 
 			<property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/sistema_cadastro"/>

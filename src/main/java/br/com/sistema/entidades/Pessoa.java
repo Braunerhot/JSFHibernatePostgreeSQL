@@ -1,61 +1,62 @@
-package br.com.entidades;
+package br.com.sistema.entidades;
 
 import java.io.Serializable;
+import java.util.Date;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 
 @Entity
-public class Produto implements Serializable {
+public class Pessoa implements Serializable{
 	
 	private static final long serialVersionUID = 1L;
-	
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
+	private String nome;
+	private String sobrenome;
+	private Integer idade;
+	@Temporal(TemporalType.DATE)
+	private Date dataNascimento;
 	
-	private String descricao;
-	
-	private String valor;
-	
-	private Integer quantidade;
-	
-	public Produto() {
+	public Pessoa() {
 		//Construtor da classe
 	}
-
+	
 	public Long getId() {
 		return id;
 	}
-
 	public void setId(Long id) {
 		this.id = id;
 	}
-
-	public String getDescricao() {
-		return descricao;
+	public String getNome() {
+		return nome;
 	}
-
-	public void setDescricao(String descricao) {
-		this.descricao = descricao;
+	public void setNome(String nome) {
+		this.nome = nome;
 	}
-
-	public String getValor() {
-		return valor;
+	public String getSobrenome() {
+		return sobrenome;
 	}
-
-	public void setValor(String valor) {
-		this.valor = valor;
+	public void setSobrenome(String sobrenome) {
+		this.sobrenome = sobrenome;
 	}
-
-	public Integer getQuantidade() {
-		return quantidade;
+	public Integer getIdade() {
+		return idade;
 	}
-
-	public void setQuantidade(Integer quantidade) {
-		this.quantidade = quantidade;
+	public void setIdade(Integer idade) {
+		this.idade = idade;
+	}
+	public Date getDataNascimento() {
+		return dataNascimento;
+	}
+	public void setDataNascimento(Date dataNascimento) {
+		this.dataNascimento = dataNascimento;
 	}
 
 	@Override
@@ -74,7 +75,7 @@ public class Produto implements Serializable {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		Produto other = (Produto) obj;
+		Pessoa other = (Pessoa) obj;
 		if (id == null) {
 			if (other.id != null)
 				return false;
@@ -83,4 +84,6 @@ public class Produto implements Serializable {
 		return true;
 	}
 	
+	
+
 }

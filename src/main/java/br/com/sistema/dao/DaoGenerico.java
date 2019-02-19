@@ -1,11 +1,11 @@
-package br.com.dao;
+package br.com.sistema.dao;
 
 import java.util.List;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
 
-import br.com.jpa_util.JPAUtil;
+import br.com.sistema.jpautil.JPAUtil;
 
 public class DaoGenerico<E> {
 

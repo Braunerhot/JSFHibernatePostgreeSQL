@@ -1,4 +1,4 @@
-package br.com.beans;
+package br.com.sistema.beans;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -7,9 +7,10 @@ import javax.annotation.PostConstruct;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ViewScoped;
 
-import br.com.dao.DaoGenerico;
-import br.com.entidades.Pessoa;
+import br.com.sistema.dao.DaoGenerico;
+import br.com.sistema.entidades.Pessoa;
 
+@SuppressWarnings("restriction")
 @ViewScoped
 @ManagedBean(name = "pessoaBean")
 public class PessoaBean {

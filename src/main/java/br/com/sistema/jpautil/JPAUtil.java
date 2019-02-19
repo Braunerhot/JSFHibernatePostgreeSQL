@@ -1,4 +1,4 @@
-package br.com.jpa_util;
+package br.com.sistema.jpautil;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
