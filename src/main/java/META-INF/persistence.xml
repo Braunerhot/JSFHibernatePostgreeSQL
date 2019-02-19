@@ -7,6 +7,7 @@
 		<class>br.com.entidades.Pessoa</class>
 		<class>br.com.entidades.Produto</class>
 		<class>br.com.entidades.Fornecedor</class>
+		<class>br.com.entidades.Vendedor</class>
 		<!-- nome do BD anterior (meuprimeiroprojetojsf) -->
 		<properties> 
 			<property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/sistema_cadastro"/>

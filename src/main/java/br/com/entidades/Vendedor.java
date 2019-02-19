@@ -1,33 +1,28 @@
 package br.com.entidades;
 
 import java.io.Serializable;
-import java.util.Date;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
 
 @Entity
-public class Pessoa implements Serializable{
+public class Vendedor implements Serializable {
 	
 	private static final long serialVersionUID = 1L;
-
+	
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
 	private String nome;
-	private String sobrenome;
-	private Integer idade;
-	@Temporal(TemporalType.DATE)
-	private Date dataNascimento;
+	private String cpf;
+	private String telefone;
+	private String email;
 	
-	public Pessoa() {
-		//Construtor da classe
+	public Vendedor() {
+		// Construtor da classe.
 	}
-	
 	public Long getId() {
 		return id;
 	}
@@ -40,25 +35,24 @@ public class Pessoa implements Serializable{
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
-	public String getSobrenome() {
-		return sobrenome;
+	public String getCpf() {
+		return cpf;
 	}
-	public void setSobrenome(String sobrenome) {
-		this.sobrenome = sobrenome;
+	public void setCpf(String cpf) {
+		this.cpf = cpf;
 	}
-	public Integer getIdade() {
-		return idade;
+	public String getTelefone() {
+		return telefone;
 	}
-	public void setIdade(Integer idade) {
-		this.idade = idade;
+	public void setTelefone(String telefone) {
+		this.telefone = telefone;
 	}
-	public Date getDataNascimento() {
-		return dataNascimento;
+	public String getEmail() {
+		return email;
 	}
-	public void setDataNascimento(Date dataNascimento) {
-		this.dataNascimento = dataNascimento;
+	public void setEmail(String email) {
+		this.email = email;
 	}
-
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -66,7 +60,6 @@ public class Pessoa implements Serializable{
 		result = prime * result + ((id == null) ? 0 : id.hashCode());
 		return result;
 	}
-
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
@@ -75,7 +68,7 @@ public class Pessoa implements Serializable{
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		Pessoa other = (Pessoa) obj;
+		Vendedor other = (Vendedor) obj;
 		if (id == null) {
 			if (other.id != null)
 				return false;
@@ -83,7 +76,6 @@ public class Pessoa implements Serializable{
 			return false;
 		return true;
 	}
-	
 	
 
 }
