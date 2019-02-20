@@ -10,7 +10,7 @@ public class JPAUtil {
 	
 	static {
 		if (factory == null) {
-			factory = Persistence.createEntityManagerFactory("sistema_clientes");
+			factory = Persistence.createEntityManagerFactory("sistema_cadastro");
 		}
 	}
 	

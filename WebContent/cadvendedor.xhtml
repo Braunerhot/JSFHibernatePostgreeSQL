@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" 
+	xmlns:h="http://java.sun.com/jsf/html" 
+	xmlns:f="http://java.sun.com/jsf/core">
+
+<h:head>
+	<title>Cadastro de Vendedores</title>
+</h:head>
+
+<h:body>
+	<h:form>
+		<h2>Cadastro de Vendedores</h2>
+		<h:outputLabel value="Código: " />
+		<h:inputText id="cp_id" value="#{vendedorBean.vendedor.id}" size="8" disabled="true" readonly="true"/><br/><br/>
+		<h:outputLabel value="Nome: "/>
+		<h:inputText id="cp_nome" value="#{vendedorBean.vendedor.nome}" size="80"/><br/><br/>
+		<h:outputLabel value="CPF: "/>
+		<h:inputText id="cp_cpf" value="#{vendedorBean.vendedor.cpf}" size="15"/><br/><br/>
+		<h:outputLabel value="Telefone: "/>
+		<h:inputText id="cp_telefone" value="#{vendedorBean.vendedor.telefone}" size="15"/><br/><br/>
+		<h:outputLabel value="E-mail: "/>
+		<h:inputText id="cp_email" value="#{vendedorBean.vendedor.email}" size="40"/><br/><br/>
+		
+		<h:commandButton value="Novo" action="#{vendedorBean.novo}"/>
+		<h:commandButton value="Salvar" action="#{vendedorBean.salvar}"/>
+		<h:commandButton value="Remover" action="#{vendedorBean.remove}"/>
+		<h:commandButton value="Voltar" action="index?faces-redirect=true"/>
+		
+		<h4>Vendedores Cadastrados</h4>
+		<!-- Lista de vendedores -->
+		<h:dataTable bgcolor="Silver" value="#{vendedorBean.vendedores}" var="vendedor">
+			<h:column>
+				<h:outputText value="#{vendedor.id}"/>
+			</h:column>
+			<h:column>
+				<h:outputText value="#{vendedor.nome}"/>
+			</h:column>
+			<h:column>
+				<h:outputText value="#{vendedor.cpf}"/>
+			</h:column>
+			<h:column>
+				<h:outputText value="#{vendedor.telefone}"/>
+			</h:column>
+			<h:column>
+				<h:commandLink value="Editar">
+					<f:setPropertyActionListener value="#{vendedor}" target="#{vendedorBean.vendedor}"/>
+				</h:commandLink>
+			</h:column>
+			<h:column>
+				<h:commandLink value="Excluir" action="#{vendedorBean.remove}">
+					<f:setPropertyActionListener value="#{vendedor}" target="#{vendedorBean.vendedor}"/>
+				</h:commandLink>
+			</h:column>
+		</h:dataTable>		
+	</h:form>
+</h:body>
+</html>

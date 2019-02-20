@@ -10,7 +10,6 @@ import javax.faces.bean.ViewScoped;
 import br.com.sistema.dao.DaoGenerico;
 import br.com.sistema.entidades.Fornecedor;
 
-@SuppressWarnings("restriction")
 @ViewScoped
 @ManagedBean(name = "fornecedorBean")
 public class FornecedorBean {

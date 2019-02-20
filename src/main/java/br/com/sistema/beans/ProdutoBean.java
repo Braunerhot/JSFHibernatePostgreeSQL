@@ -10,7 +10,6 @@ import javax.faces.bean.ViewScoped;
 import br.com.sistema.dao.DaoGenerico;
 import br.com.sistema.entidades.Produto;
 
-@SuppressWarnings("restriction")
 @ViewScoped
 @ManagedBean(name = "produtoBean")
 public class ProdutoBean {
